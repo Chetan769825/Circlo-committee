@@ -14,22 +14,32 @@ import Dashboard from "./components/Dashboard";
 import List from "./components/List";
 import Collect from "./components/Collect";
 import Chat from "./components/config/Chat";
-import Rules from './components/Rules';
-
-
+import Rules from "./components/Rules";
 
 function Layout() {
   const location = useLocation();
-  const hideNavbarRoutes = ["/login", "/register", "/forgot-password", "/home2" ,"/collect", "/create" , "/dashboard" , "/confirmation" , "/chat", "/rules"];
+  const hideNavbarRoutes = [
+    "/login",
+    "/register",
+    "/forgot-password",
+    "/home2",
+    "/collect",
+    "/create",
+    "/dashboard",
+    "/confirmation",
+    "/chat",
+    "/rules",
+  ];
+
   const shouldShowNavbar = !hideNavbarRoutes.includes(location.pathname);
 
   return (
     <>
       {shouldShowNavbar && <Navbar />}
-      
+
       <Routes>
-        <Route path="/" element={<Site/>} />
-        <Route path="/home" element={<Site />}/>
+        <Route path="/" element={<Site />} />
+        <Route path="/home" element={<Site />} />
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home2" element={<Home2 />} />
@@ -43,8 +53,6 @@ function Layout() {
         <Route path="/collect" element={<Collect />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/rules" element={<Rules />} />
-
-
       </Routes>
     </>
   );
@@ -52,7 +60,7 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Circlo-committee">
       <Layout />
     </BrowserRouter>
   );

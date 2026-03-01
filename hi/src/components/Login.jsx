@@ -17,7 +17,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/login', { email, password });
+      const res = await axios.post("http://localhost:5000/login", { email, password });
       if (res.data === "Success" || res.data.message === "Success") {
         if (rememberMe) {
           localStorage.setItem("rememberedEmail", email);

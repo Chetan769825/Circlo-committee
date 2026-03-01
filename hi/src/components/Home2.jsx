@@ -22,13 +22,16 @@ function Home2() {
     <div id="Home" className="min-h-screen pt-16 pb-10 bg-gradient-to-tr from-gray-50 via-teal-100 to-gray-200 relative">
       {/* Semi-blurred Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/back.png')",
-          filter: "blur(8px) brightness(0.95)",
-          opacity: 0.59
-        }}
-        aria-hidden="true"
+        className="absolute inset-0 bg-cover z-0 bg-center"
+style={{
+  backgroundImage: `url(${import.meta.env.BASE_URL}back.png)`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  filter: "blur(6px) brightness(0.75)",
+  opacity: 0.7
+}}
+
+      
       ></div>
 
       {/* Content */}
@@ -75,7 +78,7 @@ function Home2() {
 {/* Hero Image */}
 <motion.img
   className="w-64 md:w-80 lg:w-[380px] h-auto rounded-3xl shadow-xl object-cover"
-  src="/media/img.png"
+  src={`${import.meta.env.BASE_URL}media/Img.png`}
   alt="Committee illustration"
   loading="lazy"
   initial={{ opacity: 0, y: 40 }}

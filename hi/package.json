@@ -1,17 +1,13 @@
 {
-  "name": "hi",
-  "homepage": "https://Chetan769825.github.io/Circlo-committee/",
+  "name": "circlo-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "nodemon index.js",
-    "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

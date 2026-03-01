@@ -56,7 +56,7 @@ export default function CreateCommittee() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/committees",
+        "http://localhost:5000/api/committees",
         committeeData
       );
 

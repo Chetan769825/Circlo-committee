@@ -7,11 +7,15 @@ function Home() {
       {/* Semi-blurred Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/back.png')",
-          filter: "blur(8px) brightness(0.95)",
-          opacity: 0.59
-        }}
+style={{
+  backgroundImage: `url(${import.meta.env.BASE_URL}Back.png)`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  filter: "blur(6px) brightness(0.75)",
+  opacity: 0.7
+}}
+
+
         aria-hidden="true"
       ></div>
 
@@ -42,14 +46,15 @@ function Home() {
           {/* Hero Image */}
 <motion.img
   className="w-64 md:w-80 lg:w-[380px] h-auto rounded-3xl shadow-xl object-cover"
-  src="/media/img.png"
+  src={`${import.meta.env.BASE_URL}media/Img.png`}
   alt="Committee illustration"
   loading="lazy"
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   whileHover={{ scale: 1.05, rotate: 1 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
-/>   
+/>
+  
 
           {/* Welcome */}
           <div className="flex-1 text-center md:text-left">

@@ -37,10 +37,8 @@ app.post("/order", async (req, res) => {
 // ----------------------
 // MongoDB Connection
 // ----------------------
-mongoose.connect('mongodb://127.0.0.1:27017/employee', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log('✅ MongoDB Connected'))
+mongoose.connect('mongodb://127.0.0.1:27017/employee')
+.then(() => console.log('✅ MongoDB Connected'))
 .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
 
@@ -253,7 +251,7 @@ app.post("/api/join-committee", async (req, res) => {
 // Start Server
 // ----------------------
 const PORT = process.env.PORT || 5000;
-app.listen(3001, () => {
-  console.log(`🚀 Server running on ${3001}`);
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on ${PORT}`);
 });
 

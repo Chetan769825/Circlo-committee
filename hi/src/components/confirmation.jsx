@@ -73,7 +73,7 @@ export default function ConfirmationPage() {
     }
 
     // Create order from backend
-    const orderResponse = await fetch("http://localhost:3001/order", {
+    const orderResponse = await fetch("http://localhost:5000/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
